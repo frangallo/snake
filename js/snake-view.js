@@ -21,7 +21,10 @@
       this.board.snake.move();
       this.render();
     } else {
-      alert("You lose!");
+      window.setTimeout(function(){
+        location.reload()
+      }, 2500);
+      $("h1").html("Game Over :(")
       window.clearInterval(this.intervalId);
     }
   };
