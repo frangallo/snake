@@ -1,0 +1,29 @@
+.tile{
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid black;
+  float: left;
+  background-color: black;
+}
+
+.snake{
+  background: green;
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid black;
+  float: left;
+}
+
+.apple {
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid black;
+  float: left;
+  background: red
+}
+
+.row:after {
+  content: ""; /* Empty content string */
+  display: block; /* Only block elements can clear */
+  clear: both;
+}
