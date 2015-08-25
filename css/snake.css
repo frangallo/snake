@@ -1,4 +1,4 @@
-html, body, figure, figcaption, ul, li, h1 {
+html, body, figure, figcaption, ul, li, h1, .snake-leaderboard{
   margin: 0;
   padding: 0;
   border: 0;
@@ -50,4 +50,9 @@ h1 {
   content: ""; /* Empty content string */
   display: block; /* Only block elements can clear */
   clear: both;
+}
+
+.snake-leaderboard{
+  float: right;
+  height: 10%;
 }

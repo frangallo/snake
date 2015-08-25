@@ -56,11 +56,18 @@
     }
   };
 
+  SnakeView.prototype.updateScore= function () {
+    console.log($("h3.snake-score"))
+    console.log(this.board.snake.snakeScore)
+    $("h3.snake-score").text(this.board.snake.snakeScore); 
+  };
+
   SnakeView.prototype.render = function () {
     $(".snake").remove();
     $(".tile").remove();
     $(".apple").remove();
     $("br").remove();
+    this.updateScore();
 
     this.board.createApples(4);
 

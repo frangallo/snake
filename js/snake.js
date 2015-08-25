@@ -8,6 +8,7 @@
     this.segments = [new SnakeGame.Coord(4,3), new SnakeGame.Coord(4,4), new SnakeGame.Coord(4,5)];
     this.snakeLength = this.segments.length;
     this.board = board;
+    this.snakeScore = 0;
   }
 
   Snake.DIRS = {
@@ -39,11 +40,11 @@
     var newEl = this.segments[0].add(opp);
     this.segments = [newEl].concat(this.segments);
     this.snakeLength += 1;
+    this.snakeScore += 10
   };
 
   Snake.prototype.turn = function (direction) {
     if (Snake.DIRS[this.direction].isOpposite(Snake.DIRS[direction])) {
-      console.log(Snake.DIRS[this.direction].opposite(Snake.DIRS[direction]))
       return;
     } else {
       this.direction = direction;
