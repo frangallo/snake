@@ -47,6 +47,9 @@
       case 39:
         this.board.snake.turn("E");
         break;
+      case 78:
+        location.reload();
+        break;
     }
   };
 
@@ -57,9 +60,7 @@
   };
 
   SnakeView.prototype.updateScore= function () {
-    console.log($("h3.snake-score"))
-    console.log(this.board.snake.snakeScore)
-    $("h3.snake-score").text(this.board.snake.snakeScore); 
+    $("h3.snake-score").html("Score: " + this.board.snake.snakeScore + "<br><br>Level: " + (Math.floor(this.board.snake.snakeScore/100) + 1));
   };
 
   SnakeView.prototype.render = function () {

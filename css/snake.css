@@ -1,4 +1,4 @@
-html, body, figure, figcaption, ul, li, h1, .snake-leaderboard{
+html, body, figure, figcaption, ul, li, h1{
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,10 +6,15 @@ html, body, figure, figcaption, ul, li, h1, .snake-leaderboard{
   text-align: inherit;
 }
 
+h1{
+  color: white;
+}
+
 body {
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
+  background-color: black;
 }
 
 figure {
@@ -27,7 +32,7 @@ h1 {
   min-height: 25px;
   border: 1px solid black;
   float: left;
-  background-color: black;
+  background-color: white;
 }
 
 .snake{
@@ -52,7 +57,38 @@ h1 {
   clear: both;
 }
 
-.snake-leaderboard{
-  float: right;
-  height: 10%;
+.snake-leaderboard {
+  height: 150px;
+  width: 70%;
+  background-color: blue;
+  margin-right: 10%;
+  border: 5px solid green;
+}
+
+.snake-game{
+  margin-left: 2%;
+}
+
+.snake-score{
+  color: white;
+}
+
+.instructions{
+  height: 300px;
+  width: 70%;
+  background-color: blue;
+  margin-right: 10%;
+  border: 5px solid green;
+  margin-top: 1%;
+  color: white;
+}
+
+.extras{
+  float:right;
+  margin-top: 7%;
+  width: 43%;
+}
+
+ul{
+    list-style-type: none;
 }
