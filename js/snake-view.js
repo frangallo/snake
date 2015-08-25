@@ -5,36 +5,35 @@
 
   var SnakeView = SnakeGame.SnakeView = function ($el) {
     this.board = new SnakeGame.Board(15);
-    console.log(this.board.snake);
     this.$el = $el;
     this.bindEvents();
     this.setupBoard();
-    this.render();
-    this.run();
+    this.intervalId = window.setInterval(
+      this.step.bind(this),
+      SnakeView.STEP_MILLIS
+    );
   }
 
-  SnakeView.prototype.run = function () {
-    var that = this;
+  SnakeView.STEP_MILLIS = 100;
+
+  SnakeView.prototype.step = function () {
     if (this.board.snake.segments.length > 0) {
-      setInterval(function (){
-        that.board.snake.move();
-        that.render();
-      }, 300);
+      this.board.snake.move();
+      this.render();
     } else {
       alert("You lose!");
+      window.clearInterval(this.intervalId);
     }
   };
 
   SnakeView.prototype.bindEvents = function () {
     var that = this;
-    this.$el.on("keydown", function(event) {
-      console.log(event)
+    $(window).on("keydown", function(event) {
       that.handleKeyEvent(event.keyCode);
     });
   };
 
   SnakeView.prototype.handleKeyEvent = function (key) {
-    console.log(key)
     switch (key) {
       case 38:
         this.board.snake.turn("N");

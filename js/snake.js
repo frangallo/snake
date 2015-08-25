@@ -39,11 +39,16 @@
     var newEl = this.segments[0].add(opp);
     this.segments = [newEl].concat(this.segments);
     this.snakeLength += 1;
-    console.log("here");
   };
 
   Snake.prototype.turn = function (direction) {
-    this.direction = direction;
+    if (Snake.DIRS[this.direction].isOpposite(Snake.DIRS[direction])) {
+      console.log(Snake.DIRS[this.direction].opposite(Snake.DIRS[direction]))
+      return;
+    } else {
+      this.direction = direction;
+    }
+
   };
 
   Snake.prototype.isInSnake = function (row,col) {
@@ -67,7 +72,6 @@
     return new SnakeGame.Coord(row, col);
   };
 
-  //Added
   Snake.prototype.head = function () {
     return this.segments[this.segments.length - 1];
   };
@@ -83,8 +87,5 @@
 
     return true;
   };
-
-
-
 
 })();
