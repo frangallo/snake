@@ -14,6 +14,6 @@
   → arrow to move right
 
 ## Implementation
-  The purpose of Frank the Snake is to explore, discuss and practice good OOP design in a JavaScript-based environment, to adapt new web techniques, and to create an extremely entertaining game.
+  The purpose of Frank the Snake is to explore, discuss and practice good OOP design in a JavaScript-based environment, to adapt to new web techniques, and to create an extremely entertaining game.
 
   My UI grabs an empty element from the index file and puts an empty grid inside. The board is rendered every 100 ms, dynamically responding to the users interactions. I used jQuery's keydown event to communicate the users inputs.
