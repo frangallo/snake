@@ -7,7 +7,7 @@ html, body, figure, figcaption, ul, li, h1{
 }
 
 h1{
-  color: white;
+  color: black;
 }
 
 body {
@@ -39,7 +39,16 @@ h1 {
   background: green;
   min-width: 25px;
   min-height: 25px;
-  border: 1px solid black;
+  border: 1px solid white;
+  float: left;
+}
+
+.snake-head{
+  background-image: url("sombrero.jpg");
+  background-size: cover;
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid white;
   float: left;
 }
 
@@ -59,7 +68,7 @@ h1 {
 }
 
 .snake-leaderboard {
-  height: 150px;
+  height: 68px;
   width: 320px;
   color: black;
   border: 5px solid black;;
@@ -80,6 +89,7 @@ h1 {
   border: 5px solid black;
   margin-top: 4%;
   color: black;
+  text-align: left;
 }
 
 .extras{
@@ -92,13 +102,34 @@ ul{
 }
 
 h6{
-  color: white;
-  margin-left: -44%;
+  color: black;
+  margin-left: -42%;
   margin-top: 0%;
 }
 
-img{
-  margin-left: 15.6%;
+.logo{
+  margin-left: 19.5%;
+  max-height: 110px;
+  display: block;
+}
+
+.controls{
+  margin-left: 5%;
+}
+
+.controls-title{
+  margin-left: 31%;
+}
+
+.controls{
+  max-height: 138px;
+  margin-left: 29%;
+  margin-top: -6%;
+  display: block;
+}
+
+.game-over-logo{
+  margin-left: 16%;
   max-height: 110px;
   display: block;
 }

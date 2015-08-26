@@ -23,8 +23,8 @@
     } else {
       window.setTimeout(function(){
         location.reload()
-      }, this.intervalTime());
-      $("h1").html("Game Over")
+      }, 3000);
+      $(".logo").attr("src","../game-over.png").addClass("game-over-logo");
       window.clearInterval(this.intervalId);
     }
   };
@@ -58,6 +58,9 @@
       case 78:
         location.reload();
         break;
+      case 80:
+        this.board.switchPause();
+        break;
     }
   };
 
@@ -68,11 +71,12 @@
   };
 
   SnakeView.prototype.updateScore= function () {
-    $("h3.snake-score").html("Score: " + this.board.snake.snakeScore + "<br><br>Level: " + (Math.floor(this.board.snake.snakeScore/100) + 1));
+    $("h3.snake-score").html("Score: " + this.board.snake.snakeScore + "   " +"  Level: " + (Math.floor(this.board.snake.snakeScore/100) + 1));
   };
 
   SnakeView.prototype.render = function () {
     $(".snake").remove();
+    $(".snake-head").remove();
     $(".tile").remove();
     $(".apple").remove();
     $("br").remove();
@@ -84,7 +88,12 @@
       var $row = $($(".row")[i])
       for (var j = 0; j < this.board.size; j++) {
         if (this.board.snake.isInSnake(i, j)) {
-          $row.append($("<div></div>").addClass("snake"));
+          var head = [this.board.snake.head().row, this.board.snake.head().col,]
+          if (head[0] === i && head[1] === j){
+            $row.append($("<div></div>").addClass("snake-head"))
+          } else{
+            $row.append($("<div></div>").addClass("snake"));
+          }
         } else if (this.board.isApple(i, j)) {
           $row.append($("<div></div>").addClass("apple"));
         } else {
