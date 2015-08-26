@@ -3,9 +3,9 @@
   built using JavaScript, jQuery, HTMl, CSS and burritos. It's playable in modern web browsers.
 
 ## Instructions
-  Move your snake (green line) around the board
-  Try to eat the burritos
-  Try not to eat yourself
+- Move your snake (green line) around the board
+- Try to eat the burritos
+- Try not to eat yourself
 
 ##Controls
   ↑ arrow to move up
