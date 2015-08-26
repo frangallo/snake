@@ -59,9 +59,8 @@ h1 {
 
 .snake-leaderboard {
   height: 150px;
-  width: 70%;
+  width: 320px;
   background-color: blue;
-  margin-right: 10%;
   border: 5px solid green;
 }
 
@@ -74,21 +73,27 @@ h1 {
 }
 
 .instructions{
-  height: 300px;
-  width: 70%;
+  height: 200px;
+  width: 320px;
   background-color: blue;
   margin-right: 10%;
   border: 5px solid green;
-  margin-top: 1%;
+  margin-top: 4%;
   color: white;
 }
 
 .extras{
   float:right;
-  margin-top: 7%;
+  margin-top: 12%;
   width: 43%;
 }
 
 ul{
     list-style-type: none;
+}
+
+h6{
+  color: white;
+  margin-left: -44%;
+  margin-top: 0%;
 }

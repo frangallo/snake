@@ -23,10 +23,15 @@
     } else {
       window.setTimeout(function(){
         location.reload()
-      }, 2500);
-      $("h1").html("Game Over :(")
+      }, this.intervalTime());
+      $("h1").html("Game Over")
       window.clearInterval(this.intervalId);
     }
+  };
+
+  SnakeView.prototype.intervalTime = function () {
+    var level = (Math.floor(this.board.snake.snakeScore/100) + 1);
+    return (2000 / level);
   };
 
   SnakeView.prototype.bindEvents = function () {
