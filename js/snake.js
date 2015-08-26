@@ -9,6 +9,7 @@
     this.snakeLength = this.segments.length;
     this.board = board;
     this.snakeScore = 0;
+    this.turning = false;
   }
 
   Snake.DIRS = {
@@ -26,6 +27,7 @@
     var delta = Snake.DIRS[this.direction]
     this.segments.push(this.wrap(delta.add(this.lastEl())));
     this.segments = this.segments.slice(1)
+    this.turning = false;
 
     if (!this.isValid()) {
       this.segments = [];
@@ -44,9 +46,10 @@
   };
 
   Snake.prototype.turn = function (direction) {
-    if (Snake.DIRS[this.direction].isOpposite(Snake.DIRS[direction])) {
+    if (Snake.DIRS[this.direction].isOpposite(Snake.DIRS[direction]) || this.turning) {
       return;
     } else {
+      this.turning = true;
       this.direction = direction;
     }
 

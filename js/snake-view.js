@@ -14,7 +14,7 @@
     );
   }
 
-  SnakeView.STEP_MILLIS = 100;
+  SnakeView.STEP_MILLIS = 75;
 
   SnakeView.prototype.step = function () {
     if (this.board.snake.segments.length > 0) {
