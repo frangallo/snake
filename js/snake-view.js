@@ -24,7 +24,7 @@
       window.setTimeout(function(){
         location.reload()
       }, 3000);
-      $(".logo").attr("src","../game-over.png").addClass("game-over-logo");
+      $(".logo").attr("src","./game-over.png").addClass("game-over-logo");
       window.clearInterval(this.intervalId);
     }
   };
