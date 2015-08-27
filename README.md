@@ -8,10 +8,10 @@
 - Try not to eat yourself
 
 ##Controls
-  ↑ arrow to move up
-  ← arrow to move left
-  ↓ arrow to move down
-  → arrow to move right
+* ↑ arrow to move up
+* ← arrow to move left
+* ↓ arrow to move down
+* → arrow to move right
 
 ## Implementation
   The purpose of Frank the Snake is to explore, discuss and practice good OOP design in a JavaScript-based environment, to adapt to new web techniques, and to create an extremely entertaining game.
