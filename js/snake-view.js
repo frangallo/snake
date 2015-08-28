@@ -21,13 +21,22 @@
       this.board.snake.move();
       this.render();
     } else {
-      window.setTimeout(function(){
-        location.reload()
-      }, 3000);
-      $(".logo").attr("src","./game-over.png").addClass("game-over-logo");
-      window.clearInterval(this.intervalId);
+      this.gameReset();
     }
   };
+
+  SnakeView.prototype.gameReset = function (){
+    $('body').append("<div>").addClass('m-background')
+    $("h3.final-score").html("Final Score: " + this.board.snake.snakeScore + "<br><h4>Too Much Tequilla!</h4>")
+    $(".m-content").show();
+    $("#play-again-button").click(function(){
+      location.reload();
+    });
+    // $("#end-game-button").click(function(){
+    //   console.log("here")
+    //   window.parent.close();
+    // });
+  },
 
   SnakeView.prototype.intervalTime = function () {
     var level = (Math.floor(this.board.snake.snakeScore/100) + 1);
