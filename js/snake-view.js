@@ -32,10 +32,6 @@
     $("#play-again-button").click(function(){
       location.reload();
     });
-    // $("#end-game-button").click(function(){
-    //   console.log("here")
-    //   window.parent.close();
-    // });
   },
 
   SnakeView.prototype.intervalTime = function () {
